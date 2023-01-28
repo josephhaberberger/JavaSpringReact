@@ -1,6 +1,5 @@
 package com.littleh322.springboot.springboot.main.java.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.littleh322.springboot.springboot.modal.Employee;
@@ -16,7 +15,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static com.littleh322.springboot.springboot.main.java.util.EmployeeUtil.generateEmployee;
 import static com.littleh322.springboot.springboot.main.java.util.ObjectMapperUtil.asJsonString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -32,6 +30,11 @@ class EmployeeControllerTest {
     private Employee cachedEmployee;
 
     private Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
+
+    @BeforeAll
+    public static void testSetup() {
+        System.out.println("\rBEFORE THE CLASS\r");
+    }
 
     @Test
     @Order(1)
@@ -90,6 +93,6 @@ class EmployeeControllerTest {
 
     @AfterAll
     void teardown() {
-        System.out.println("\r\nAFTER THE CLASS: CLEAN UP\r\n");
+        System.out.println("\rAFTER THE CLASS: CLEAN UP\r");
     }
 }

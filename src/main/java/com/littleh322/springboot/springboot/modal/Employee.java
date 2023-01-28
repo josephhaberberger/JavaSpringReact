@@ -1,11 +1,7 @@
 package com.littleh322.springboot.springboot.modal;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import javax.persistence.*;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "tb_emp")
@@ -65,5 +61,15 @@ public class Employee {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getNameAndGender() {
+        return this.name + " " + this.gender;
+    }
+
+    public int calculateAvgTimeSpent(int num1, int num2) {
+        if(num2 == 0)
+            throw new IllegalArgumentException("Cannot divide by zero.");
+        return num1 / num2;
     }
 }

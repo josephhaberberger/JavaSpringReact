@@ -43,12 +43,12 @@ dependencies {
 	/*JUnit 5 - Jupiter*/
 	testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.0'
 	testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.16.1'
-	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.2'
-	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.2'
+	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0'
+	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.6.0'
 	testImplementation group: 'org.junit.platform', name: 'junit-platform-engine', version: '1.6.2' /*Needed for JUnit 5 Parameterized Tests*/
 	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.3.1.RELEASE'
 	testImplementation group: 'org.mock-server', name: 'mockserver-netty', version: '5.11.1'
-	
+
 	/************** MAYBE USE THIS LATER **************/
 	/* compile group: 'io.crnk', name: 'crnk-core', version: '2.5.20180326220647' */
 }
